@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CleanMovie.API.Migrations
+namespace CleanMovie.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

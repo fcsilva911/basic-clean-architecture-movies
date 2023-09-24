@@ -12,9 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<MovieDbContext>(
-    opt => opt.UseSqlServer(config.GetConnectionString("MoviesConnectionString"),
-    b => b.MigrationsAssembly("CleanMovie.API")));
+builder.Services.AddMovieDbContext(config.GetConnectionString("MoviesConnectionString"));
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 

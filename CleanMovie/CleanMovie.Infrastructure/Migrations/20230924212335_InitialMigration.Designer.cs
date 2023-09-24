@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CleanMovie.API.Migrations
+namespace CleanMovie.Infrastructure.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20230920221920_InitialMigration")]
+    [Migration("20230924212335_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
