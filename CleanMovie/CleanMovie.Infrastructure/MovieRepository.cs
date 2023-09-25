@@ -5,15 +5,23 @@ namespace CleanMovie.Infrastructure
 {
     public class MovieRepository : IMovieRepository
     {
-        private static List<Movie> _movies = new List<Movie>()
+        private readonly MovieDbContext _context;
+
+        public MovieRepository(MovieDbContext context)
         {
-            new Movie { Id = 1, Name = "Shutter Island", Cost = 0.99m },
-            new Movie { Id = 2, Name = "Titanic", Cost = 0.49m },
-        };
+            _context = context;
+        }
+
+        public Movie CreateMovie(Movie movie)
+        {
+            _context.Movies.Add(movie);
+            _context.SaveChanges();
+            return movie;
+        }
 
         public List<Movie> GetAllMovies()
         {
-            return _movies;
+            return _context.Movies.ToList();
         }
     }
 }
