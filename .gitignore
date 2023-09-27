@@ -1,10 +1,8 @@
+# Ignore bin and obj directories
+**/bin/
+**/obj/
+
 CleanMovie/.vs/
-CleanMovie/CleanMovie.API/bin/
-CleanMovie/CleanMovie.API/obj/
-CleanMovie/CleanMovie.Application/obj/
-CleanMovie/CleanMovie.Domain/obj/
-CleanMovie/CleanMovie.Infrastructure/bin/
-CleanMovie/CleanMovie.Infrastructure/obj/
-CleanMovie/CleanMovie.Domain/bin/
-CleanMovie/CleanMovie.Application/bin/
 CleanMovie/CleanMovie.API/CleanMovie.API.csproj.user
+.vs/
+*.user
