@@ -35,7 +35,9 @@ namespace Authentication.API.Repository
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, users.Name)
+                    new Claim(ClaimTypes.Name, users.Name),
+                    new Claim(ClaimTypes.Role, "ReadMovies"),
+                    new Claim(ClaimTypes.Role, "CreateMovies"),
                 }),
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(
